@@ -163,7 +163,7 @@ dotenv.config(); // Load .env
 
 const app = express();
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "https://yapit.onrender.com", // Use FRONTEND_URL from .env
+  origin: process.env.FRONTEND_URL || "https://yapit.onrender.com/", // Use FRONTEND_URL from .env
   methods: ["GET", "POST"]
 }));
 app.use(express.json());
