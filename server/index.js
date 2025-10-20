@@ -163,18 +163,18 @@ dotenv.config(); // Load .env
 
 const app = express();
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "*", // Use FRONTEND_URL from .env
+  origin: process.env.FRONTEND_URL || "https://yapit.onrender.com", // Use FRONTEND_URL from .env
   methods: ["GET", "POST"]
 }));
 app.use(express.json());
 
-const JWT_SECRET = process.env.JWT_SECRET || "fallback_secret"; // fallback for local dev
+const JWT_SECRET = process.env.JWT_SECRET || "c8f9b2e5d1a47f6b9c3d2e8a1f4b6c7d9e2f1a3b5c6d7e8f9a0b1c2d3e4f5a6b"; // fallback for local dev
 
 const PORT = process.env.PORT || 3001;
 
 const server = http.createServer(app);
 const io = new Server(server, {
-  cors: { origin: process.env.FRONTEND_URL || "*", methods: ["GET", "POST"] },
+  cors: { origin: process.env.FRONTEND_URL || "https://yapit.onrender.com", methods: ["GET", "POST"] },
 });
 
 // In-memory stores (demo)
