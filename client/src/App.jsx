@@ -824,7 +824,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { io } from "socket.io-client";
 import { MessageCircle, Users, LogOut, Send, Plus, UserPlus, LogIn, UserCheck, X, Hash } from "lucide-react";
 
-const API = "http://localhost:3001";
+const API = "https://yapit-vrdu.onrender.com/";
 
 export default function App() {
   const [token, setToken] = useState("");
