@@ -820,11 +820,11 @@
 //   );
 // }
 
-import React, { useEffect, useState, useRef } from "react";
+import { Hash, LogIn, LogOut, MessageCircle, Plus, Send, UserCheck, UserPlus, Users, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
-import { MessageCircle, Users, LogOut, Send, Plus, UserPlus, LogIn, UserCheck, X, Hash } from "lucide-react";
 
-const API = "https://yapit-vrdu.onrender.com/";
+const API = "http://localhost:3001";
 
 export default function App() {
   const [token, setToken] = useState("");

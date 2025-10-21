@@ -292,19 +292,19 @@
 
 // server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 // server/index.js
-import express from "express";
-import http from "http";
-import { Server } from "socket.io";
 import cors from "cors";
-import jwt from "jsonwebtoken";
 import crypto from "crypto";
 import dotenv from "dotenv";
+import express from "express";
+import http from "http";
+import jwt from "jsonwebtoken";
+import { Server } from "socket.io";
 
 dotenv.config(); // Load .env
 
 // ---------- App Setup ----------
 const app = express();
-const FRONTEND_URL = process.env.FRONTEND_URL || "https://yapit.onrender.com";
+const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173";
 
 app.use(cors({
   origin: FRONTEND_URL,
